@@ -40,52 +40,54 @@ function bill(billAmount) {
     }
   }
 }
-function returnValue(cash,billAmount,)
-{    let changeValue;
-    if (Number(cash) >= Number(billAmount)) {
-        changeValue = Number(cash) - Number(billAmount);
-        console.log("billAmount", billAmount);
-        console.log("changeValue", changeValue);
-        let cashchange = [0, 0, 0, 0, 0, 0, 0];
-        cashchange = change(changeValue, cash_given, cashchange);
-  
-        for (let i = 0; i < notes.length; i++) {
-          notes[i].textContent = cashchange[i];
-        }
-        if (result.classList.contains("display")) {
-          result.classList.remove("display");
-        }
-        if (!warnings.classList.contains("display")) {
-          warnings.classList.add("display");
-        }
-      } else {
-        warnings.textContent =
-          "Enter cash value greater than or Equal to Bill Amount";
-        if (warnings.classList.contains("display")) {
-          warnings.classList.remove("display");
-        }
-        if (!result.classList.contains("display")) {
-          result.classList.add("display");
-        }
-      }
+function returnValue(cash, billAmount) {
+  let changeValue;
+  if (Number(cash) >= Number(billAmount)) {
+    changeValue = Number(cash) - Number(billAmount);
+    console.log("billAmount", billAmount);
+    console.log("changeValue", changeValue);
+    let cashchange = [0, 0, 0, 0, 0, 0, 0];
+    cashchange = change(changeValue, cash_given, cashchange);
+
+    for (let i = 0; i < notes.length; i++) {
+      notes[i].textContent = cashchange[i];
+    }
+    if (result.classList.contains("display")) {
+      result.classList.remove("display");
+    }
+    if (!warnings.classList.contains("display")) {
+      warnings.classList.add("display");
+    }
+  } else {
+    warnings.textContent =
+      "Enter cash value greater than or Equal to Bill Amount";
+    if (warnings.classList.contains("display")) {
+      warnings.classList.remove("display");
+    }
+    if (!result.classList.contains("display")) {
+      result.classList.add("display");
+    }
+  }
 }
 
 let billAmount;
 let cash;
-console.log(cash)
-
+console.log(cash);
+billInput.addEventListener("change", function (e) {
+  billAmount = e.target.value;
+  
+});
+cashInput.addEventListener("change", function (e) {
+  cash = e.target.value;
+  console.log(cash)
+});
 btnNext.addEventListener("click", function () {
-billAmount = billInput.value;
-bill(billAmount);
-
+  billAmount = billInput.value;
+  bill(billAmount);
 });
 btnCheck.addEventListener("click", function () {
-    cash = cashInput.value;
-    console.log(cashInput.value)
-    console.log(billAmount)
-    returnValue(cash,billAmount);
-    
+  cash = cashInput.value;
+  console.log(cashInput.value);
+  console.log(billAmount);
+  returnValue(cash, billAmount);
 });
-
-
-
