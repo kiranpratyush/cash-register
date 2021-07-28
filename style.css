@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color:#9CA3AF;
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    background-color:white;
+    width:80%;
+    margin:0.9rem auto;
+    padding:1.2rem;
+}
+.container h1{
+    text-align: center;
+    padding:2rem;
+    color:#60A5FA;
+}
+.container p{
+    text-align:center;
+    font-weight:bold;
+
+}
+.container input,
+.container label{
+    display:block;
+    padding:0.5rem 1.25rem;
+    margin:1.2rem auto;
+    width:50%;
+    border:none;
+    
+}
+.container input{
+    border-bottom:2px solid black;
+}
+
+button{
+    display:block;
+    margin:1.4rem auto;
+    width:10rem;
+    padding:0.5rem 1.2rem;
+    background-color: #60A5FA;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+
+
+}
+.warnings{
+    Text-align:center;
+}
+
+.result table{
+   table-layout: fixed;
+   width:100%;
+}
+
+.result table tbody{
+    background-color: brown;
+    
+}
+
+.result table th,
+.result table td{
+  padding:1.2rem;
+  background-color: #60A5FA;
+  border-collapse: collapse;
+  word-wrap: break-word;
+}
+
+
+
+/* class to make elemnent invisible */
+
+.display{
+    display:none;
+}

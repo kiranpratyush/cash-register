@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cah register</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cash Register</h1>
+      <p>Enter the bill amount and give minimum number of notes to customer</p>
+      <div class="first">
+        <label for="bill">Bill amount</label>
+        <input type="number" name="bill" id="bill" />
+        <button class="next">Next</button>
+      </div>
+
+      <div class="second display">
+        <label for="cash">Cash given</label>
+        <input type="number" name="cash" id="cash" />
+        <button class="check">check</button>
+      </div>
+
+      <div class="warnings display">Warning will appear here</div>
+
+      <div class="result display">
+        <table>
+          <tr>
+            <th>Note</th>
+            <td>2000</td>
+            <td>500</td>
+            <td>100</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th>No of Notes</th>
+            <td class="notes">1</td>
+            <td class="notes">2</td>
+            <td class="notes">3</td>
+            <td class="notes">4</td>
+            <td class="notes">5</td>
+            <td class="notes">6</td>
+            <td class="notes">7</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
