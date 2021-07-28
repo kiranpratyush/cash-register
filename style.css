@@ -11,6 +11,7 @@ body{
 }
 
 .container{
+    max-width:800px;
     background-color:white;
     width:80%;
     margin:0.9rem auto;
@@ -73,6 +74,8 @@ button{
   background-color: #60A5FA;
   border-collapse: collapse;
   word-wrap: break-word;
+  color:white;
+  font-weight:bold;
 }
 
 

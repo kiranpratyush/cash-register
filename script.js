@@ -51,6 +51,10 @@ function returnValue(cash, billAmount) {
 
     for (let i = 0; i < notes.length; i++) {
       notes[i].textContent = cashchange[i];
+      if(Number(notes[i].textContent)!=0)
+      {
+        notes[i].style.color ="black";
+      }
     }
     if (result.classList.contains("display")) {
       result.classList.remove("display");
