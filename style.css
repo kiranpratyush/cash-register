@@ -85,3 +85,11 @@ button{
 .display{
     display:none;
 }
+
+/* Adding media Queries */
+@media(max-width: 340px)
+{
+    .container{
+        width:100%;
+    }
+}
