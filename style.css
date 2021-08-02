@@ -90,6 +90,6 @@ button{
 @media(max-width: 340px)
 {
     .container{
-        width:100%;
+        width:100%;0
     }
 }
