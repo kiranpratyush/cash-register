@@ -1,4 +1,5 @@
 "use strict";
+// selecting the button using the QuerySelector
 const billInput = document.querySelector("input[id='bill']");
 const btnNext = document.querySelector(".next");
 const secondDiv = document.querySelector(".second");
@@ -9,8 +10,8 @@ const result = document.querySelector(".result");
 const notes = document.querySelectorAll(".notes");
 
 let cash_given = [2000, 500, 100, 20, 10, 5, 1];
-
-function change(change, cash_given, cash) {
+// function for giving minimum number of cashes
+function change(change, cash_given, cash) { // changing the cash using the greedy approach .
   for (let i = 0; i < cash_given.length; i++) {
     while (change >= cash_given[i]) {
       change = change - cash_given[i];
@@ -19,9 +20,10 @@ function change(change, cash_given, cash) {
   }
   return cash;
 }
+
 function bill(billAmount) {
   if (Number(billAmount) <= 0) {
-    warnings.textContent = "Enter Positive value of Bill Amount";
+    warnings.textContent = "Enter Positive value of Bill Amount"; // If the negative value of bill is entered then give the warning . 
     if (warnings.classList.contains("display")) {
       warnings.classList.remove("display");
     }
