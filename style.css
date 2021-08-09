@@ -59,23 +59,18 @@ button{
 }
 
 .result table{
-   table-layout: fixed;
    width:100%;
 }
 
-.result table tbody{
-    background-color: brown;
-    
-}
 
 .result table th,
 .result table td{
-  padding:1.2rem;
   background-color: #60A5FA;
   border-collapse: collapse;
   word-wrap: break-word;
   color:white;
   font-weight:bold;
+  padding:0.2rem;
 }
 
 
