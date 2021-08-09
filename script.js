@@ -52,10 +52,15 @@ function returnValue(cash, billAmount) {
     cashchange = change(changeValue, cash_given, cashchange);
 
     for (let i = 0; i < notes.length; i++) {
-      notes[i].textContent = cashchange[i];
-      if(Number(notes[i].textContent)!=0)
-      {
-        notes[i].style.color ="black";
+      // notes[i].textContent = cashchange[i];
+      if (cashchange[i] != 0) {
+        notes[i].textContent = cashchange[i]; // where it is necessary then the numbers is added under the respective section
+      }
+      else {
+        notes[i].textContent = ""; // if the notes field is Zero then nothing is printed
+      }
+      if (Number(notes[i].textContent) != 0) {
+        notes[i].style.color = "black";
       }
     }
     if (result.classList.contains("display")) {
@@ -81,7 +86,7 @@ let cash;
 console.log(cash);
 billInput.addEventListener("change", function (e) {
   billAmount = e.target.value;
-  
+
 });
 cashInput.addEventListener("change", function (e) {
   cash = e.target.value;
